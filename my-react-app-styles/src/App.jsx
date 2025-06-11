@@ -1,11 +1,10 @@
-import Button from "./components/Button/Button"
+import TailwindText from "./components/Text/text"
 
 function App() {
 
   return (
     <>
-      <Button><p>Gris</p></Button>
-      <Button blue><p>Azul</p></Button>
+      <TailwindText />
     </>
   )
 }
