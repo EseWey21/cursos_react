@@ -1,4 +1,5 @@
 import { useContext, createContext, useState } from 'react';
+import CounterWithCustomHook from './components/CounterWithCustomHook/CounterWithCustomHook';
 import './App.css';
 
 const ThemeContext = createContext();
@@ -38,12 +39,15 @@ function ThemeButton() {
 
 function App() {
   return (
-    <ThemeProvider> {/* <-- corregido aquí */}
-      <div style={{ padding: '20px' }}>
-        <h1>Mi aplicación con tema dinámico</h1>
-        <ThemeButton />
-      </div>
-    </ThemeProvider>
+    <>
+      <ThemeProvider>
+        <div style={{ padding: '20px' }}>
+          <h1>Mi aplicación con tema dinámico</h1>
+          <ThemeButton />
+        </div>
+      </ThemeProvider>
+      <CounterWithCustomHook />
+    </>
   );
 }
 
